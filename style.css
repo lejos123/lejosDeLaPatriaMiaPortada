@@ -68,6 +68,7 @@ body {
     display: block;
     width: auto;
     margin: 0 30px 0 30px;
+    animation: fadeInSlideUp 2s ease-in-out forwards; /* Aplica la animación fadeInSlideUp */
 }
 
 .button, .icon-button {
@@ -104,10 +105,11 @@ body {
     max-width: 20%; /* Ajuste del tamaño máximo del GIF */
     height: auto; /* Para mantener la proporción */
     text-align: center;
+    animation: fadeInSlideUp 2s ease-in-out forwards; /* Aplica la animación fadeInSlideUp */
 }
 
 .intro {
-    font-size: 18px;
+    font-size: 20px;
     line-height: 1.6;
     text-align: justify;
 }
@@ -117,6 +119,7 @@ h1 {
     font-weight: 400; /* Especificar el peso de la fuente */
     font-size: 45px;
     margin-bottom: 0;
+    animation: fadeInSlideUp 0.5s ease-in-out forwards; /* Aplica la animación fadeInSlideUp */
 }
 
 /*h2{
@@ -129,6 +132,18 @@ h1 {
 img{
     width: 50%;
     margin-bottom: 20px;
+    animation: fadeInSlideUp 1.2s ease-in-out forwards; /* Aplica la animación fadeInSlideUp */
+}
+
+@keyframes fadeInSlideUp {
+    0% {
+        opacity: 0; /* Empieza completamente transparente */
+        transform: translateY(100%); /* Empieza debajo del contenedor */
+    }
+    100% {
+        opacity: 1; /* Termina completamente visible */
+        transform: translateY(0); /* Termina en su posición final */
+    }
 }
 
 
@@ -136,12 +151,13 @@ img{
 /* Media Query para dispositivos móviles */
 @media (max-width: 600px) {
     .alert-box {
+        background-size: auto;
         width: 90%;
         padding: 20px;
     }
 
     .content {
-        width: 90%;
+        width: 80%;
         padding: 20px;
     }
 
@@ -154,6 +170,7 @@ img{
         font-size: 14px;
         padding: 8px 8px;
     }
+    
 
     .tenor-gif-embed {
         max-width: 20%; /* Ajuste del tamaño máximo del GIF para móviles */
