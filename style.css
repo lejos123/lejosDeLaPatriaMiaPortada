@@ -1,0 +1,161 @@
+body {
+    font-family: 'Merriweather', serif;
+    background: url('https://cnnespanol.cnn.com/wp-content/uploads/2021/06/GettyImages-3272021.jpg?quality=100&strip=info') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Fondo oscuro semitransparente */
+    z-index: -1; /* Asegura que esté detrás del contenido */
+    backdrop-filter: blur(10px); /* Difumina el fondo */
+}
+
+.alert-box {
+    background-color: rgba(255, 255, 255); /* Fondo semitransparente */
+    border: 2px solid #d1d1d1;
+    width: 90%;
+    max-width: 300px;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1; /* Asegura que esté por encima del contenido */
+}
+
+.alert-box.active {
+    display: none;
+}
+
+.content {
+    background-color: white;
+    border: 1px solid #ccc;
+    width: 90%;
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: center;
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 0; /* Asegura que esté detrás del cuadro de alerta */
+}
+
+.content.active {
+    display: block;
+}
+.button{
+    
+    text-align: center;
+    display: block;
+    width: auto;
+    margin: 0 30px 0 30px;
+}
+
+.button, .icon-button {
+    background-color: #003366; /* Un azul oscuro elegante */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 25px;
+    font-size: 12px;
+    transition: background-color 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.button:hover, .icon-button:hover {
+    background-color: #002244;
+}
+
+.button:focus, .icon-button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 51, 102, 0.5);
+}
+
+
+.gif-container {
+    margin-top: 20px; /* Espacio entre el botón y el GIF */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tenor-gif-embed {
+    max-width: 20%; /* Ajuste del tamaño máximo del GIF */
+    height: auto; /* Para mantener la proporción */
+    text-align: center;
+}
+
+.intro {
+    font-size: 18px;
+    line-height: 1.6;
+    text-align: justify;
+}
+h1 {
+    font-family: 'Wittgenstein', sans-serif; /* Aplicar la fuente Wittgenstein */
+    font-style: italic; /* Aplicar estilo itálico */
+    font-weight: 400; /* Especificar el peso de la fuente */
+    font-size: 45px;
+    margin-bottom: 0;
+}
+
+/*h2{
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    margin-top: 0;
+}*/
+
+img{
+    width: 50%;
+    margin-bottom: 20px;
+}
+
+
+
+/* Media Query para dispositivos móviles */
+@media (max-width: 600px) {
+    .alert-box {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .content {
+        width: 90%;
+        padding: 20px;
+    }
+
+    .intro {
+        font-size: 16px;
+        line-height: 1.4;
+    }
+
+    .button, .icon-button {
+        font-size: 14px;
+        padding: 8px 8px;
+    }
+
+    .tenor-gif-embed {
+        max-width: 20%; /* Ajuste del tamaño máximo del GIF para móviles */
+    }
+}
