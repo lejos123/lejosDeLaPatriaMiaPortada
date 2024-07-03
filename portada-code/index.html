@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alerta con Widget y GIF</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    
+    <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+    <!-- Enlace a Font Awesome ICONO DE PARAR -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!--fuente de intro-->
+    <link href="https://fonts.googleapis.com/css2?family=Wittgenstein:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Wittgenstein:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="overlay"></div> <!-- Agrega esta línea -->
+
+<div class="alert-box" id="alertBox">
+    <h1 class=".wittgenstein">Introducción</h1>
+    <!--<h2>Lejos de la patria mia</h2> -->
+    <img src="img/portada.png" alt="portadaDeLibro">
+    <button id="playButton" class="button">Click aqui para comenzar</button>
+    <audio id="audio" src="audio/AveMaria.mp3"></audio>
+    
+    <!-- Contenedor para el GIF -->
+    <div class="gif-container">
+        <div class="tenor-gif-embed" data-postid="14404274" data-share-method="host" data-aspect-ratio="0.84" data-width="100%"><a href="https://tenor.com/view/click-subscribe-pointing-up-one-point-gif-14404274">Click Subscribe Sticker</a>from <a href="https://tenor.com/search/click-stickers">Click Stickers</a></div>
+    </div>
+</div>
+
+<div class="content" id="content">
+    <button id="pauseButton" class="icon-button"><i class="fa-solid fa-circle-stop"></i></button>
+    
+    <!-- Párrafo -->
+    <p class="intro">
+        Este libro está basado en la vida del protagonista, quien siendo muy joven se recibió de médico en su patria, Ucrania. En ese entonces, bajo el régimen comunista, fue convocado por el ejército soviético durante la Segunda Guerra Mundial. Cayó prisionero de los alemanes, quienes lo destinaron a un campo de concentración, donde para sobrevivir, se vio obligado a colaborar. Posteriormente, fue trasladado a un microestado ubicado al norte de Italia, conocido como Cossakia.<br><br>
+        
+        Al finalizar la guerra y no poder regresar a su patria natal, decidió emigrar a América, donde para poder ejercer su profesión, tuvo que estudiar nuevamente la carrera de Medicina y se graduó en la Universidad de Buenos Aires.<br><br>
+        
+        Este libro fue escrito durante los años 2022-2024, respaldado por documentación original. Además, incluye músicas y sonidos generados por Inteligencia Artificial para una experiencia más inmersiva.<br><br>
+        
+        Descubre esta historia de resiliencia y superación en tiempos de adversidad.<br><br>
+        
+        ¡Espero que lo disfrutes!
+    </p>
+</div>
+
+<script src="app.js" defer></script>
+
+</body>
+</html>
