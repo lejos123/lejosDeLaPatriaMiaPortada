@@ -68,7 +68,8 @@ body {
     display: block;
     width: auto;
     margin: 0 30px 0 30px;
-    animation: fadeInSlideUp 2s ease-in-out forwards; /* Aplica la animación fadeInSlideUp */
+    /* Aplica la animación fadeIn */
+    animation: fadeIn 1s ease-in-out forwards;
 }
 
 .button, .icon-button {
@@ -105,7 +106,8 @@ body {
     max-width: 20%; /* Ajuste del tamaño máximo del GIF */
     height: auto; /* Para mantener la proporción */
     text-align: center;
-    animation: fadeInSlideUp 2s ease-in-out forwards; /* Aplica la animación fadeInSlideUp */
+   /* Aplica la animación fadeIn */
+    animation: fadeIn 1s ease-in-out forwards;
 }
 
 .intro {
@@ -132,8 +134,21 @@ h1 {
 img{
     width: 50%;
     margin-bottom: 20px;
-    animation: fadeInSlideUp 1.2s ease-in-out forwards; /* Aplica la animación fadeInSlideUp */
+    animation: fadeInSlideUp 0.7s ease-in-out forwards; /* Aplica la animación fadeInSlideUp */
 }
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0; /* Empieza completamente transparente */
+    }
+    50%{
+        opacity: 0;
+    }
+    100% {
+        opacity: 1; /* Termina completamente visible */
+    }
+}
+
 
 @keyframes fadeInSlideUp {
     0% {
