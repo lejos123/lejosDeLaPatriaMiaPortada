@@ -7,6 +7,17 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
+    padding: 1rem;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding-top: 2rem; /* Ajusta el padding-top según sea necesario */
 }
 
 .overlay {
@@ -15,74 +26,51 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Fondo oscuro semitransparente */
-    z-index: -1; /* Asegura que esté detrás del contenido */
-    backdrop-filter: blur(10px); /* Difumina el fondo */
+    background: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+    backdrop-filter: blur(10px);
 }
 
 .alert-box {
-    background-color: rgba(255, 255, 255); /* Fondo semitransparente */
+    background-color: rgba(255, 255, 255);
     border: 2px solid #d1d1d1;
     width: 90%;
     max-width: 300px;
-    padding: 20px;
+    padding: 1rem;
     border-radius: 12px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
     text-align: center;
     display: block;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 1; /* Asegura que esté por encima del contenido */
-}
-
-.alert-box.active {
-    display: none;
+    z-index: 1;
+    overflow: auto;
 }
 
 .content {
     background-color: white;
     border: 1px solid #ccc;
     width: 90%;
-    max-width: 600px;
-    margin: auto;
-    padding: 20px;
+    max-width: 1000px;
+    margin: 1rem 0;
+    padding: 1rem;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
     display: none;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 0; /* Asegura que esté detrás del cuadro de alerta */
-}
-
-.content.active {
-    display: block;
-}
-.button{
-    
-    text-align: center;
-    display: block;
-    width: auto;
-    margin: 0 30px 0 30px;
-    /* Aplica la animación fadeIn */
-    animation: fadeIn 1s ease-in-out forwards;
+    overflow: auto;
 }
 
 .button, .icon-button {
-    background-color: #003366; /* Un azul oscuro elegante */
+    background-color: #003366;
     color: white;
     border: none;
-    padding: 10px 20px;
+    padding: 0.5rem 1rem;
     cursor: pointer;
     border-radius: 25px;
-    font-size: 12px;
+    font-size: 1rem;
     transition: background-color 0.3s ease;
     text-transform: uppercase;
     letter-spacing: 1px;
+    max-width: 100%;
 }
 
 .button:hover, .icon-button:hover {
@@ -94,100 +82,93 @@ body {
     box-shadow: 0 0 0 3px rgba(0, 51, 102, 0.5);
 }
 
-
 .gif-container {
-    margin-top: 20px; /* Espacio entre el botón y el GIF */
+    margin-top: 1rem;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .tenor-gif-embed {
-    max-width: 20%; /* Ajuste del tamaño máximo del GIF */
-    height: auto; /* Para mantener la proporción */
+    max-width: 20%;
+    height: auto;
     text-align: center;
-   /* Aplica la animación fadeIn */
     animation: fadeIn 1s ease-in-out forwards;
 }
 
 .intro {
-    font-size: 20px;
+    font-size: 1.25rem;
     line-height: 1.6;
     text-align: justify;
+    max-height: 50vh;
+    overflow-y: auto;
 }
+
 h1 {
-    font-family: 'Wittgenstein', sans-serif; /* Aplicar la fuente Wittgenstein */
-    font-style: italic; /* Aplicar estilo itálico */
-    font-weight: 400; /* Especificar el peso de la fuente */
-    font-size: 45px;
+    font-family: 'Wittgenstein', sans-serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 2.5rem;
     margin-bottom: 0;
-    animation: fadeInSlideUp 0.5s ease-in-out forwards; /* Aplica la animación fadeInSlideUp */
+    animation: fadeInSlideUp 0.5s ease-in-out forwards;
 }
 
-/*h2{
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 20px;
-    font-style: normal;
-    margin-top: 0;
-}*/
-
-img{
+img {
     width: 50%;
-    margin-bottom: 20px;
-    animation: fadeInSlideUp 0.7s ease-in-out forwards; /* Aplica la animación fadeInSlideUp */
+    margin-bottom: 1rem;
+    animation: fadeInSlideUp 0.7s ease-in-out forwards;
 }
 
 @keyframes fadeIn {
     0% {
-        opacity: 0; /* Empieza completamente transparente */
+        opacity: 0;
     }
-    50%{
+    50% {
         opacity: 0;
     }
     100% {
-        opacity: 1; /* Termina completamente visible */
+        opacity: 1;
     }
 }
-
 
 @keyframes fadeInSlideUp {
     0% {
-        opacity: 0; /* Empieza completamente transparente */
-        transform: translateY(100%); /* Empieza debajo del contenedor */
+        opacity: 0;
+        transform: translateY(100%);
     }
     100% {
-        opacity: 1; /* Termina completamente visible */
-        transform: translateY(0); /* Termina en su posición final */
+        opacity: 1;
+        transform: translateY(0);
     }
 }
 
-
-
-/* Media Query para dispositivos móviles */
 @media (max-width: 600px) {
-    .alert-box {
-        background-size: auto;
-        width: 90%;
-        padding: 20px;
+    .alert-box, .content {
+        padding: 1rem;
     }
 
-    .content {
-        width: 80%;
-        padding: 20px;
+    .content{
+        max-width: 600px;
     }
 
     .intro {
-        font-size: 16px;
+        font-size: 1rem;
         line-height: 1.4;
     }
 
     .button, .icon-button {
-        font-size: 14px;
-        padding: 8px 8px;
+        font-size: 0.875rem;
+        padding: 0.5rem;
     }
-    
 
     .tenor-gif-embed {
-        max-width: 20%; /* Ajuste del tamaño máximo del GIF para móviles */
+        max-width: 30%;
+    }
+
+    h1 {
+        font-size: 2rem;
     }
 }
+
+
+
