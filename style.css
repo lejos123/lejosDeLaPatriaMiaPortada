@@ -42,7 +42,6 @@ main {
     text-align: center;
     display: block;
     z-index: 1;
-    overflow: auto;
 }
 
 .content {
@@ -71,6 +70,7 @@ main {
     text-transform: uppercase;
     letter-spacing: 1px;
     max-width: 100%;
+    animation: fadeIn 1s ease-in-out forwards;
 }
 
 .button:hover, .icon-button:hover {
