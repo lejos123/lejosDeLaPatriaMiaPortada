@@ -13,6 +13,7 @@
     <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
     <!-- Enlace a Font Awesome ICONO DE PARAR -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
     <!--fuente de intro-->
     <link href="https://fonts.googleapis.com/css2?family=Wittgenstein:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Wittgenstein:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
@@ -24,9 +25,10 @@
 <div class="alert-box" id="alertBox">
     <h1 class=".wittgenstein">Introducción</h1>
     <!--<h2>Lejos de la patria mia</h2> -->
+    
     <img src="img/portada.png" alt="portadaDeLibro">
     <button id="playButton" class="button">Click aqui para comenzar</button>
-    <audio id="audio" src="audio/AveMaria.mp3"></audio>
+    <audio id="audio" src="audio/audio ave con voz.mp3"></audio>
     
     <!-- Contenedor para el GIF -->
     <div class="gif-container">
@@ -35,7 +37,17 @@
 </div>
 
 <div class="content" id="content">
-    <button id="pauseButton" class="icon-button"><i class="fa-solid fa-circle-stop"></i></button>
+    <div id="content-btn">
+
+        <div id="play-box">
+            <i class="fa-solid fa-circle-play"></i>
+        </div>
+        <div id="pauseButton">
+            <i class="fa-solid fa-circle-stop"></i>
+        </div>
+
+    </div>
+   
     
     <!-- Párrafo -->
     <p class="intro">
@@ -49,6 +61,9 @@
         
         ¡Espero que lo disfrutes!
     </p>
+    <div id="btn-venta">
+        <a href="">Disponible en versión digital</a>
+    </div>
 </div>
 
 <script src="app.js" defer></script>

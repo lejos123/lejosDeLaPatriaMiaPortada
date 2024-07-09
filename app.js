@@ -10,3 +10,9 @@ document.getElementById('pauseButton').addEventListener('click', function() {
     var audio = document.getElementById('audio');
     audio.pause();
 });
+
+document.getElementById('play-box').addEventListener('click', function()
+{
+    var audio = document.getElementById('audio');
+    audio.play();
+});
